@@ -1,1101 +1,1270 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Project Title</title>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/footer.js"></script>
-  <style>
-    .menu-index {
-      color: rgb(255, 255, 255) !important;
-      opacity: 1 !important;
-      font-weight: 700 !important;
-    }
-  </style>
+  <!-- Meta Tags -->
+  <title>SmartSacco | Financial Inclusion for All</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Digital platform transforming SACCOs with accessible financial technology">
+  
+  <!-- Preload Resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@600;700&display=swap" as="style">
+  
+  <!-- External CSS -->
+  <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Internal CSS -->
+  <link href="css/frame.css" rel="stylesheet">
+  <link href="css/controls.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <div class="menu-container"></div>
-  <div class="content-container">
-    <!-------------------------------------------------------------------------------------------->
-    <!--Start Header-->
-    <div class="banner" style="background: url('img/dummy-background.jpeg') no-repeat center; background-size: cover; height: 300px;"></div>
-    <div class="banner">
-      <div class="banner-table flex-column">
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin-small">This is the header area</h2>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, <a href="javascript:void(0)">sem quam semper libero</a>, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-          </div>
-        </div>
+  <!-- Header Section -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-brand">
+        <a href="index.html" aria-label="SmartSacco Home">
+          <img src="image/sacco.jpeg" alt="SmartSacco Logo" class="header-logo">
+          <span class="brand-name">SmartSacco</span>
+        </a>
       </div>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page"><i class="fas fa-home nav-icon"></i> Overview</a></li>
+          <li class="nav-item"><a href="widgets.html" class="nav-link"><i class="fas fa-tachometer-alt nav-icon"></i> Dashboard</a></li>
+          <li class="nav-item"><a href="embedding.html" class="nav-link"><i class="fas fa-chart-line nav-icon"></i> Analytics</a></li>
+          <li class="nav-item"><a href="widgets.html#team" class="nav-link"><i class="fas fa-users nav-icon"></i> Team</a></li>
+          <li class="nav-item"><a href="mailto:contact@smartsacco.org" class="nav-link cta-button"><i class="fas fa-envelope nav-icon"></i> Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <!--End Header-->
-    <!-------------------------------------------------------------------------------------------->
-    <div class="content">
-      <div class="content-table flex-column">
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Intro-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <img class="image" src="img/dummay-img.png">
-          </div>
-          <div class="flex-item flex-column">
-            <p class="text text-large">
-              <a target="_blank" href="javascript:void(0)">Author 1</a>, author1 (at) cs.cmu.edu<br>
-              <a target="_blank" href="javascript:void(0)">Author 2</a>, author2 (at) cs.cmu.edu<br>
-              <a target="_blank" href="javascript:void(0)">Author 3</a>, author3 (at) cs.cmu.edu<br>
-              <a target="_blank" href="javascript:void(0)">Laboratory</a><br>
-              <a target="_blank" href="javascript:void(0)">Institute</a><br>
-              <a target="_blank" href="javascript:void(0)">Organization</a><br>
-              <a target="_blank" href="javascript:void(0)">Street Address</a><br>
-              <a target="_blank" href="javascript:void(0)">City, State, Country</a>
-            </p>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text add-top-margin">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-              sapien ut libero venenatis faucibus. Nullam quis ante.
-            </p>
-            <h3>Table of Content</h3>
-            <ul>
-              <li><a href="#text-only">Text Only</a></li>
-              <li><a href="#buttons-and-inputs">Buttons and Inputs</a></li>
-              <li><a href="#images-and-image-button">Images and Image Button</a></li>
-              <li><a href="#text-around-image">Text around Image</a></li>
-              <li><a href="#centered-image-and-table">Centered Image and Table</a></li>
-              <li><a href="#adaptive-image">Adaptive Image</a></li>
-              <li><a href="#text-with-images-and-videos">Text with Images and Videos</a></li>
-              <li><a href="#iframe">Iframe</a></li>
-              <li><a href="#list-of-projects">List of Projects</a></li>
-              <li><a href="#gallery">Gallery (responsive size)</a></li>
-              <li><a href="#masonry">Masonry (responsive size)</a></li>
-              <li><a href="#survey">Survey</a></li>
-            </ul>
-          </div>
-        </div>
-        <!--End Intro-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Text Only-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="text-only">Text Only</h2>
-            <hr>
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-            <p class="text">
-              Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
-              vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos
-              ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
-              animi, id est laborum et dolorum fuga.
-            </p>
-            <h3>Break Long URL</h3>
-            <p class="text">
-              <a class="break-long-url" target="_blank" href="https://www.google.com/maps/place/Carnegie+Mellon+University/@40.4430576,-79.9431263,17z/data=!4m5!3m4!1s0x8834f21f58679a9f:0x88716b461fc4daf4!8m2!3d40.4428753!4d-79.9430922">https://www.google.com/maps/place/Carnegie+Mellon+University/@40.4430576,-79.9431263,17z/data=!4m5!3m4!1s0x8834f21f58679a9f:0x88716b461fc4daf4!8m2!3d40.4428753!4d-79.9430922</a>
-            </p>
-            <h3>Nested List</h3>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, <a target="_blank" href="javascript:void(0)">sit amet adipiscing sem neque</a> sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-              <li>Aenean commodo ligula eget dolor.
-                <ul>
-                  <li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</li>
-                  <li>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                    <ul>
-                      <li>Li nov <a target="_blank" href="javascript:void(0)">lingua franca</a>.</li>
-                      <li>It va esser Occidental.</li>
-                      <li>Existent Europan lingues.</li>
-                    </ul>
-                  </li>
-                  <li>Nullam dictum felis eu pede mollis pretium.</li>
-                </ul>
-              </li>
-              <li>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </li>
-            </ul>
-            <p class="text">
-              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
-              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
-              It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un
-              simplificat Angles, quam un skeptic Cambridge amico dit me.
-            </p>
-            <ol class="nested">
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-              <li>Aenean commodo ligula eget dolor.
-                <ol class="nested">
-                  <li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</li>
-                  <li>In enim justo, <a target="_blank" href="javascript:void(0)">rhoncus ut, imperdiet a</a>, venenatis vitae, justo.
-                    <ol class="nested">
-                      <li>Li nov lingua franca.</li>
-                      <li>It va esser Occidental.</li>
-                      <li>Existent Europan lingues.</li>
-                    </ol>
-                  </li>
-                  <li>Nullam dictum felis eu pede mollis pretium.</li>
-                </ol>
-              </li>
-              <li>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </li>
-            </ol>
-            <h3>List with Customized Reverse Numbering</h3>
-            <ol class="publication C-list">
-              <li>
-                <p class="text-small-margin">
-                  Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-                  augue. Curabitur ullamcorper ultricies nisi.
-                </p>
-              </li>
-              <li>
-                <p class="text-small-margin">
-                  Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-                  condimentum rhoncus, sem quam semper libero, <a target="_blank" href="javascript:void(0)">sit amet adipiscing sem neque sed ipsum</a>. Nam quam nunc, blandit
-                  vel, luctus pulvinar, hendrerit id, lorem.
-                </p>
-              </li>
-              <li>
-                <p class="text-small-margin">
-                  Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
-                  coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
-                </p>
-              </li>
-            </ol>
-            <h3>Math Equations</h3>
-            <p class="text">
-              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
-              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
-            </p>
-            <img class="image center" src="https://latex.codecogs.com/svg.latex?C\cdot(3\sin\theta_1+3\sin\theta_2-\cos\theta_1-\cos\theta_2)" style="max-width: 300px;">
-            <p class="text">
-              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
-              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
-            </p>
-          </div>
-        </div>
-        <!--End Text Only-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Text with Buttons-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="buttons-and-inputs">Buttons and Inputs</h2>
-            <hr>
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-            <div class="control-group">
-              <button class="custom-button">Default</button>
-              <button class="custom-button custom-button-primary">Primary</button>
-              <button class="custom-button custom-button-danger">Danger</button>
-              <button class="custom-button custom-button-info">Info</button>
-              <button class="custom-button" disabled>Disabled</button>
-              <a class="custom-button" target="_blank" href="https://github.com/yenchiah/project-website-template" target="_blank">Hyperlink</a>
-              <button class="custom-button custom-button-primary stretch-on-mobile">Stretch on Mobile</button>
-            </div>
-            <div class="control-group">
-              <button class="custom-button pulse-black">Pulse</button>
-              <button class="custom-button custom-button-primary pulse-primary">Pulse</button>
-              <button class="custom-button custom-button-danger pulse-danger">Pulse</button>
-              <button class="custom-button custom-button-info pulse-info">Pulse</button>
-            </div>
-            <div class="control-group">
-              <button class="custom-button-flat"><img src="img/home.png"></button>
-              <button class="custom-button-flat" disabled><img src="img/home.png"></button>
-              <button class="custom-button-flat small"><img src="img/home.png"></button>
-              <button class="custom-button-flat large"><img src="img/home.png"></button>
-            </div>
-            <div class="control-group">
-              <button class="custom-button-flat"><img src="img/calendar.png"></button>
-              <button class="custom-button-flat"><img src="img/play.png"></button>
-              <button class="custom-button-flat"><img src="img/pause.png"></button>
-              <button class="custom-button-flat"><img src="img/stop.png"></button>
-              <button class="custom-button-flat"><img src="img/terrain.png"></button>
-              <button class="custom-button-flat"><img src="img/close.png"></button>
-              <button class="custom-button-flat"><img src="img/collection.png"></button>
-              <button class="custom-button-flat"><img src="img/next.png"></button>
-              <button class="custom-button-flat"><img src="img/back.png"></button>
-              <button class="custom-button-flat"><img src="img/setting.png"></button>
-              <button class="custom-button-flat"><img src="img/book.png"></button>
-              <button class="custom-button-flat"><img src="img/user.png"></button>
-              <button class="custom-button-flat"><img src="img/share.png"></button>
-              <button class="custom-button-flat"><img src="img/submit.png"></button>
-              <a class="custom-button-flat" href="https://github.com/yenchiah/project-website-template" target="_blank">
-                <img src="img/link.png">
-              </a>
-            </div>
-            <div class="control-group">
-              <button class="custom-button-flat"><img src="img/home.png"><span>Home</span></button>
-              <button class="custom-button-flat" disabled><img src="img/home.png"><span>Disabled</span></button>
-              <button class="custom-button-flat small"><img src="img/home.png"><span>Small</span></button>
-              <button class="custom-button-flat large"><img src="img/home.png"><span>Large</span></button>
-            </div>
-            <div class="control-group">
-              <button class="custom-button-flat"><img src="img/calendar.png"><span>Calendar</span></button>
-              <button class="custom-button-flat"><img src="img/play.png"><span>Play</span></button>
-              <button class="custom-button-flat"><img src="img/stop.png"><span>Stop</span></button>
-              <button class="custom-button-flat"><img src="img/terrain.png"><span>Terrain</span></button>
-              <button class="custom-button-flat"><img src="img/close.png"><span>Close</span></button>
-              <button class="custom-button-flat"><img src="img/collection.png"><span>Collection</span></button>
-              <button class="custom-button-flat"><img src="img/next.png"><span>Next</span></button>
-              <button class="custom-button-flat"><img src="img/back.png"><span>Back</span></button>
-              <button class="custom-button-flat"><img src="img/setting.png"><span>Setting</span></button>
-              <button class="custom-button-flat"><img src="img/book.png"><span>Tutorial</span></button>
-              <button class="custom-button-flat"><img src="img/user.png"><span>User</span></button>
-              <button class="custom-button-flat"><img src="img/share.png"><span>Share</span></button>
-              <button class="custom-button-flat"><img src="img/submit.png"><span>Submit</span></button>
-              <a class="custom-button-flat" href="https://github.com/yenchiah/project-website-template" target="_blank">
-                <img src="img/link.png"><span>Hyperlink</span>
-              </a>
-              <button class="custom-button-flat stretch-on-mobile"><img src="img/play.png"><span>Stretch on Mobile</span></button>
-            </div>
-            <div class="control-group">
-              <button class="custom-button-flat pulse-black"><img src="img/home.png"><span>Pulse</span></button>
-              <button class="custom-button-flat pulse-primary"><img src="img/home.png"><span>Pulse</span></button>
-              <button class="custom-button-flat pulse-danger"><img src="img/home.png"><span>Pulse</span></button>
-              <button class="custom-button-flat pulse-info"><img src="img/home.png"><span>Pulse</span></button>
-            </div>
-            <p class="text">
-              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
-              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
-              It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un
-              simplificat Angles, quam un skeptic Cambridge amico dit me.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row-space-between">
-          <div class="flex-item flex-column">
-            <p class="text badge-text">Large Badge Caption!</p>
-          </div>
-          <div class="flex-item flex-column">
-            <div class="control-group">
-              <a href="javascript:void(0)" target="_blank" class="custom-image-button">
-                <img src="img/app-store-badge.png" width="150">
-              </a>
-              <a href="javascript:void(0)" target="_blank" class="custom-image-button">
-                <img src="img/google-play-badge.png" width="150">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-            <div class="control-group">
-              <input class="custom-textbox stretch-on-mobile" type="text" placeholder="e.g., 15213">
-              <textarea class="custom-textbox stretch-on-mobile" placeholder="e.g., 15213"></textarea>
-            </div>
-            <div class="control-group">
-              <input class="custom-textbox stretch-on-mobile" value="https://yenchiah.me/" type="text" readonly>
-              <textarea class="custom-textbox stretch-on-mobile" readonly>Phasellus viverra nulla ut metus varius laoreet.</textarea>
-            </div>
-            <p class="text">
-              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
-              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
-              It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un
-              simplificat Angles, quam un skeptic Cambridge amico dit me.
-            </p>
-          </div>
-        </div>
-        <!--End Text with Buttons-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Text with Images and Image buttons-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="images-and-image-button">Images and Image Button</h2>
-            <hr>
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row-space-between">
-          <div class="flex-item flex-column">
-            <img class="image max-width-400" src="img/dummay-img.png">
-            <p class="image-caption">Image Caption</p>
-          </div>
-          <div class="flex-item flex-column">
-            <a href="https://github.com/yenchiah/project-website-template" target="_blank" class="image max-width-400">
-              <img src="img/dummay-img.png">
-            </a>
-            <p class="image-caption">Image Button Caption</p>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-          </div>
-        </div>
-        <!--End Text with Images and Image buttons-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Text around Image-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="text-around-image">Text around Image</h2>
-            <hr>
-            <p class="text">
-              <img class="image image-wrap-text max-width-400" src="img/dummay-img.png">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-              amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
-              voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-              pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-              deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-              similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-              rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-              impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis.
-            </p>
-          </div>
-        </div>
-        <!--End Text around Image-->
-        <!-------------------------------------------------------------------------------------------->
-      </div>
-    </div>
-    <div class="banner" style="background: url('img/dummy-background.jpeg') no-repeat center; background-size: cover; height: 500px;">
-      <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.5);">
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin-small">This is the banner area with photo</h2>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur <a href="javascript:void(0)">ullamcorper ultricies nisi</a>. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="content-table flex-column">
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Text with Centered Image and Table-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="centered-image-and-table" class="no-top-margin">Centered Image and Table</h2>
-            <hr>
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-            <p class="text text-center graph-title">
-              This image does not scroll and only scale.
-            </p>
-            <img class="image center max-width-400 add-top-margin-small" src="img/dummay-img.png">
-            <p class="text text-center graph-title">
-              This image scrolls on mobile with a fixed height.
-            </p>
-            <div class="scrollable-image-container center add-top-margin-small">
-              <img class="scrollable-image center" src="img/dummay-img.png">
-            </div>
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-            <p class="text text-center graph-title">
-              This is the title for the bottom scrollable table.
-            </p>
-            <div class="custom-table-container center add-top-margin-small">
-              <table class="custom-table">
-                <thead>
-                  <tr class="bg-color-gray">
-                    <th>Number of</th>
-                    <th class="text-center">Unique Users</th>
-                    <th class="text-center">Smell Reports</th>
-                    <th class="text-center">Interaction Events</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Enthusiasts</td>
-                    <td class="text-center">9.4%</td>
-                    <td class="text-center">50.6%</td>
-                    <td class="text-center">44.8%</td>
-                  </tr>
-                  <tr class="bg-color-light-gray">
-                    <td>Explorers</td>
-                    <td class="text-center">36.1%</td>
-                    <td class="text-center">37.3%</td>
-                    <td class="text-center">27.3%</td>
-                  </tr>
-                  <tr>
-                    <td>Contributors</td>
-                    <td class="text-center">13.0%</td>
-                    <td class="text-center">12.1%</td>
-                    <td class="text-center">n/a</td>
-                  </tr>
-                  <tr class="bg-color-light-gray">
-                    <td>Observers</td>
-                    <td class="text-center">41.6%</td>
-                    <td class="text-center">n/a</td>
-                    <td class="text-center">27.9%</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td>Size (N)</td>
-                    <td class="text-center">2,237</td>
-                    <td class="text-center">8,112</td>
-                    <td class="text-center">79,447</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-            <p class="text text-center graph-title">
-              This is the title for the bottom very long scrollable table.
-            </p>
-            <div class="custom-table-container center add-top-margin-small">
-              <table class="custom-table">
-                <thead>
-                  <tr class="bg-color-gray">
-                    <th class="text-center">Smell Rating</th>
-                    <th class="text-center">2019</th>
-                    <th class="text-center">2018</th>
-                    <th class="text-center">2017</th>
-                    <th class="text-center">2016</th>
-                    <th class="text-center">2015</th>
-                    <th class="text-center">2014</th>
-                    <th class="text-center">2013</th>
-                    <th class="text-center">2012</th>
-                    <th class="text-center">2011</th>
-                    <th class="text-center">2010</th>
-                    <th class="text-center">2009</th>
-                    <th class="text-center">2008</th>
-                    <th class="text-center">2007</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td class="text-center">1,711 (9.5%)</td>
-                    <td class="text-center">1,199 (13.0%)</td>
-                    <td class="text-center">1,658 (20.4%)</td>
-                    <td class="text-center">1,199 (13.0%)</td>
-                    <td class="text-center">1,658 (20.4%)</td>
-                    <td class="text-center">1,199 (13.0%)</td>
-                    <td class="text-center">1,658 (20.4%)</td>
-                    <td class="text-center">1,199 (13.0%)</td>
-                    <td class="text-center">1,658 (20.4%)</td>
-                    <td class="text-center">1,199 (13.0%)</td>
-                    <td class="text-center">1,658 (20.4%)</td>
-                    <td class="text-center">1,199 (13.0%)</td>
-                    <td class="text-center">1,658 (20.4%)</td>
-                  </tr>
-                  <tr class="bg-color-light-gray">
-                    <td class="text-center">2</td>
-                    <td class="text-center">798 (4.4%)</td>
-                    <td class="text-center">497 (5.4%)</td>
-                    <td class="text-center">665 (8.2%)</td>
-                    <td class="text-center">497 (5.4%)</td>
-                    <td class="text-center">665 (8.2%)</td>
-                    <td class="text-center">497 (5.4%)</td>
-                    <td class="text-center">665 (8.2%)</td>
-                    <td class="text-center">497 (5.4%)</td>
-                    <td class="text-center">665 (8.2%)</td>
-                    <td class="text-center">497 (5.4%)</td>
-                    <td class="text-center">665 (8.2%)</td>
-                    <td class="text-center">497 (5.4%)</td>
-                    <td class="text-center">665 (8.2%)</td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td class="text-center">4,305 (23.9%)</td>
-                    <td class="text-center">2,649 (28.8%)</td>
-                    <td class="text-center">2,246 (27.7%)</td>
-                    <td class="text-center">2,649 (28.8%)</td>
-                    <td class="text-center">2,246 (27.7%)</td>
-                    <td class="text-center">2,649 (28.8%)</td>
-                    <td class="text-center">2,246 (27.7%)</td>
-                    <td class="text-center">2,649 (28.8%)</td>
-                    <td class="text-center">2,246 (27.7%)</td>
-                    <td class="text-center">2,649 (28.8%)</td>
-                    <td class="text-center">2,246 (27.7%)</td>
-                    <td class="text-center">2,649 (28.8%)</td>
-                    <td class="text-center">2,246 (27.7%)</td>
-                  </tr>
-                  <tr class="bg-color-light-gray">
-                    <td class="text-center">4</td>
-                    <td class="text-center">5,804 (32.3%)</td>
-                    <td class="text-center">2,932 (31.9%)</td>
-                    <td class="text-center">2,171 (26.8%)</td>
-                    <td class="text-center">2,932 (31.9%)</td>
-                    <td class="text-center">2,171 (26.8%)</td>
-                    <td class="text-center">2,932 (31.9%)</td>
-                    <td class="text-center">2,171 (26.8%)</td>
-                    <td class="text-center">2,932 (31.9%)</td>
-                    <td class="text-center">2,171 (26.8%)</td>
-                    <td class="text-center">2,932 (31.9%)</td>
-                    <td class="text-center">2,171 (26.8%)</td>
-                    <td class="text-center">2,932 (31.9%)</td>
-                    <td class="text-center">2,171 (26.8%)</td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td class="text-center">5,356 (29.8%)</td>
-                    <td class="text-center">1,918 (20.9%)</td>
-                    <td class="text-center">1,372 (16.9%)</td>
-                    <td class="text-center">1,918 (20.9%)</td>
-                    <td class="text-center">1,372 (16.9%)</td>
-                    <td class="text-center">1,918 (20.9%)</td>
-                    <td class="text-center">1,372 (16.9%)</td>
-                    <td class="text-center">1,918 (20.9%)</td>
-                    <td class="text-center">1,372 (16.9%)</td>
-                    <td class="text-center">1,918 (20.9%)</td>
-                    <td class="text-center">1,372 (16.9%)</td>
-                    <td class="text-center">1,918 (20.9%)</td>
-                    <td class="text-center">1,372 (16.9%)</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td class="text-center">Sum</td>
-                    <td class="text-center">17,974</td>
-                    <td class="text-center">9,195</td>
-                    <td class="text-center">8,112</td>
-                    <td class="text-center">9,195</td>
-                    <td class="text-center">8,112</td>
-                    <td class="text-center">9,195</td>
-                    <td class="text-center">8,112</td>
-                    <td class="text-center">9,195</td>
-                    <td class="text-center">8,112</td>
-                    <td class="text-center">9,195</td>
-                    <td class="text-center">8,112</td>
-                    <td class="text-center">9,195</td>
-                    <td class="text-center">8,112</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-          </div>
-        </div>
-        <!--End Text with Centered Image and Table-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Text with Adaptive Image-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="adaptive-image">Adaptive Image</h2>
-            <hr>
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-            <a class="image adaptive-image" style="background-image: url('img/dummay-img-long.png'); min-height: 150px;" href="img/dummay-img-long.png" target="_blank"></a>
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-          </div>
-        </div>
-        <!--End Text with Adaptive Image-->
-        <!-------------------------------------------------------------------------------------------->
-      </div>
-    </div>
-    <div class="banner" style="background: url('img/dummy-background.jpeg') no-repeat center; background-size: cover; height: 500px;"></div>
-    <div class="banner">
-      <div class="banner-table flex-column">
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin-small">This is the two banner area with photo</h2>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="content-table flex-column">
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Text with Images and Videos-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="text-with-images-and-videos" class="no-top-margin">Text with Images and Videos</h2>
-            <hr>
-            <p class="text">
-              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
-              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
-              It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un
-              simplificat Angles, quam un skeptic Cambridge amico dit me.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <img class="image" src="img/dummay-img.png">
-          </div>
-          <div class="flex-item flex-item-stretch flex-column">
-            <p class="text">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-              sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-              magnam aliquam quaerat voluptatem. Sed ut perspiciatis unde.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <video preload controls autoplay loop muted playsinline class="image">
-              <source src="vid/mov_bbb.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="flex-item flex-item-stretch flex-column">
-            <p class="text">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-              sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-              magnam.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text">
-              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
-              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
-              It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un
-              simplificat Angles, quam un skeptic Cambridge amico dit me.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch-2 flex-column">
-            <p class="text">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-              sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
-            </p>
-          </div>
-          <div class="flex-item flex-item-stretch flex-column">
-            <img class="image" src="img/dummay-img.png">
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch-2 flex-column">
-            <p class="text">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-              sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
-            </p>
-          </div>
-          <div class="flex-item flex-item-stretch flex-column">
-            <video preload controls autoplay loop muted playsinline class="image">
-              <source src="vid/mov_bbb.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <p class="text">
-              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
-              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
-              custosi traductores. At solmen va esser.
-            </p>
-          </div>
-        </div>
-        <!--End Text with Images and Videos-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Text with Iframe-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="iframe">Iframe</h2>
-            <hr>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-            <iframe class="iframe-in-body" src="https://yenchiah.me/geo-heatmap/smell.html"></iframe>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-          </div>
-        </div>
-        <!--END Text with Iframe-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start List of Projects-->
-        <div class="flex-row">
-          <div class="flex-item flex-column full-width">
-            <h2 id="list-of-projects">List of Projects</h2>
-            <hr>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <img class="image max-width-400" src="img/dummay-img.png">
-          </div>
-          <div class="flex-item flex-item-stretch-4 flex-column">
-            <p class="text">
-              <a class="highlight-text" href="javascript:void(0)">Li Europan Lingues es Membres Del Sam Familie</a><br>
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <img class="image max-width-400" src="img/dummay-img.png">
-          </div>
-          <div class="flex-item flex-item-stretch-4 flex-column">
-            <p class="text">
-              <a class="highlight-text" href="javascript:void(0)">Li Europan Lingues es Membres Del Sam Familie</a><br>
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet.
-            </p>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <img class="image max-width-400" src="img/dummay-img.png">
-          </div>
-          <div class="flex-item flex-item-stretch-4 flex-column">
-            <p class="text">
-              <a class="highlight-text" href="javascript:void(0)">Li Europan Lingues es Membres Del Sam Familie</a><br>
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet.
-            </p>
-          </div>
-        </div>
-        <!--End List of Projects-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Gallery-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="gallery">Gallery (responsive size)</h2>
-            <hr>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-          </div>
-        </div>
-        <div class="gallery add-top-margin-small add-bottom-margin-small">
-          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
-            <div>Image Caption</div>
-          </a>
-          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
-            <div>Image Caption</div>
-          </a>
-          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
-            <div>Image Caption</div>
-          </a>
-          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
-            <div>Image Caption</div>
-          </a>
-          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
-            <div>Image Caption</div>
-          </a>
-          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
-            <div>Image Caption</div>
-          </a>
-          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
-            <div>Image Caption</div>
-          </a>
-          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
-            <div>Image Caption</div>
-          </a>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-          </div>
-        </div>
-        <div class="gallery add-top-margin-small add-bottom-margin-small">
-          <div class="flex-column">
-            <img src="img/dummay-img.png">
-            <h3>Phasellus Viverra</h3>
-            <div>Quisque Rutrum</div>
-            <div>
-              <a href="https://yenchiah.me/project-website-template/" target="_blank">Website</a>
-              &nbsp;|&nbsp;
-              <a href="https://yenchiah.me/project-website-template/" target="_blank">LinkedIn</a>
-            </div>
-          </div>
-          <div class="flex-column">
-            <img src="img/dummay-img.png">
-            <h3>Phasellus Viverra</h3>
-            <div>Quisque Rutrum</div>
-            <div>
-              <a href="https://yenchiah.me/project-website-template/" target="_blank">Website</a>
-              &nbsp;|&nbsp;
-              <a href="https://yenchiah.me/project-website-template/" target="_blank">LinkedIn</a>
-            </div>
-          </div>
-          <div class="flex-column">
-            <img src="img/dummay-img.png">
-            <h3>Phasellus Viverra</h3>
-            <div>Quisque Rutrum</div>
-            <div>
-              <a href="https://yenchiah.me/project-website-template/" target="_blank">Website</a>
-              &nbsp;|&nbsp;
-              <a href="https://yenchiah.me/project-website-template/" target="_blank">LinkedIn</a>
-            </div>
-          </div>
-          <div class="flex-column">
-            <img src="img/dummay-img.png">
-            <h3>Phasellus Viverra</h3>
-            <div>Quisque Rutrum</div>
-            <div>
-              <a href="https://yenchiah.me/project-website-template/" target="_blank">Website</a>
-              &nbsp;|&nbsp;
-              <a href="https://yenchiah.me/project-website-template/" target="_blank">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-          </div>
-        </div>
-        <!--End Gallery-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Masonry-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="masonry">Masonry (responsive size)</h2>
-            <hr>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-          </div>
-        </div>
-        <div class="masonry add-top-margin-small add-bottom-margin-small">
-          <figure>
-            <img src="https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1820&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@heftiba" target="_blank">Toa Heftiba</a></div>
-            <figcaption>Phasellus viverra nulla!</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1590727264967-f26b2d31e3a1?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=792&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@markusspiske" target="_blank">Markus Spiske</a></div>
-            <figcaption>Nam eget dui, etiam rhoncus, maecenas tempus</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@priscilladupreez" target="_blank">Priscilla Du Preez</a></div>
-            <figcaption>Nam quam nunc, blandit vel, luctus pulvinar!!!</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1558023784-f8343393cb06?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@frankielopez" target="_blank">Frankie Lopez</a></div>
-            <figcaption>Pellentesque habitant morbi!</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1629036747901-6cad3758cd92?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=772&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@zhugher" target="_blank">he zhu</a></div>
-            <figcaption>Phasellus blandit leo ut odio.</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1477238134895-98438ad85c30?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2600&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@cant89" target="_blank">Davide Cantelli</a></div>
-            <figcaption>Vestibulum ante ipsum primis</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1613946069412-38f7f1ff0b65?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@simonkaremann" target="_blank">Simon Karemann</a></div>
-            <figcaption>Aenean tellus metus, bibendum sed, posuere ac, mattis.</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1577985043696-8bd54d9f093f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@adrienolichon" target="_blank">Adrien Olichon</a></div>
-            <figcaption>Nunc nonummy metus vestibulum volutpat.</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1594788094620-4579ad50c7fe?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1742&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@mohammadshahhosseini" target="_blank">Mohammad Shahhosseini</a></div>
-            <figcaption>Sed fringilla mauris sit amet nibh.</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1548&amp;q=80">
-            <div>Credit: <a href="https://unsplash.com/@domlafou" target="_blank">Dom Fou</a></div>
-            <figcaption>Vestibulum purus quam, scelerisque ut.</figcaption>
-          </figure>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-          </div>
-        </div>
-        <!--End Masonry-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Survey-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="survey">Survey</h2>
-            <hr>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-            <div class="custom-survey add-top-margin add-bottom-margin">
-              <span class="text">1. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</span>
-              <div class="custom-radio-group-survey add-top-margin">
-                <div><input type="radio" name="scenario-question-sq-1508-scale" value="2596" id="scenario-question-sq-1508-item-0"> <label class="break-long-url" for="scenario-question-sq-1508-item-0">Strongly Agree</label></div>
-                <div><input type="radio" name="scenario-question-sq-1508-scale" value="2597" id="scenario-question-sq-1508-item-1"> <label class="break-long-url" for="scenario-question-sq-1508-item-1">Agree</label></div>
-                <div><input type="radio" name="scenario-question-sq-1508-scale" value="2598" id="scenario-question-sq-1508-item-2"> <label class="break-long-url" for="scenario-question-sq-1508-item-2">Neutral</label></div>
-                <div><input type="radio" name="scenario-question-sq-1508-scale" value="2599" id="scenario-question-sq-1508-item-3"> <label class="break-long-url" for="scenario-question-sq-1508-item-3">Disagree</label></div>
-                <div><input type="radio" name="scenario-question-sq-1508-scale" value="2600" id="scenario-question-sq-1508-item-4"> <label class="break-long-url" for="scenario-question-sq-1508-item-4">Strongly Disagree</label></div>
-              </div>
-            </div>
-            <div class="custom-survey add-top-margin add-bottom-margin">
-              <span class="text">2. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</span>
-              <div class="custom-radio-group-survey add-top-margin">
-                <div><input type="checkbox" name="scenario-question-sq-1508-scale" value="2596" id="scenario-question-sq-1510-item-0"> <label class="break-long-url" for="scenario-question-sq-1510-item-0">Strongly Agree</label></div>
-                <div><input type="checkbox" name="scenario-question-sq-1508-scale" value="2597" id="scenario-question-sq-1510-item-1"> <label class="break-long-url" for="scenario-question-sq-1510-item-1">Agree</label></div>
-                <div><input type="checkbox" name="scenario-question-sq-1508-scale" value="2598" id="scenario-question-sq-1510-item-2"> <label class="break-long-url" for="scenario-question-sq-1510-item-2">Neutral</label></div>
-                <div><input type="checkbox" name="scenario-question-sq-1508-scale" value="2599" id="scenario-question-sq-1510-item-3"> <label class="break-long-url" for="scenario-question-sq-1510-item-3">Disagree</label></div>
-                <div><input type="checkbox" name="scenario-question-sq-1508-scale" value="2600" id="scenario-question-sq-1510-item-4"> <label class="break-long-url" for="scenario-question-sq-1510-item-4">Strongly Disagree</label></div>
-              </div>
-            </div>
-            <div class="custom-survey add-top-margin add-bottom-margin">
-              <span class="text">3. Do you have any comments for this study?</span>
-              <textarea class="custom-textbox-survey add-top-margin" placeholder="(max 500 characters)" maxlength="500"></textarea>
-            </div>
-            <div class="custom-survey add-top-margin add-bottom-margin">
-              <span class="text">4. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</span>
-              <div class="custom-radio-group-survey image-only add-top-margin">
-                <div> <input type="checkbox" name="scenario-question-sq-1545-scale" value="2720" id="scenario-question-sq-1545-item-2"><label for="scenario-question-sq-1545-item-2">
-                    <figure><img src="https://images.unsplash.com/photo-1597914377769-db5167cb0221?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=774&amp;q=80">
-                      <div>Credit: Justus Menke</div>
-                      <figcaption>Phasellus viverra nulla ut metus varius laoreet.</figcaption>
-                    </figure>
-                  </label> </div>
-                <div> <input type="checkbox" name="scenario-question-sq-1545-scale" value="2726" id="scenario-question-sq-1545-item-4"><label for="scenario-question-sq-1545-item-4">
-                    <figure><img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2874&amp;q=80">
-                      <div>Credit: Chris Montgomery</div>
-                      <figcaption>Nam eget dui. Etiam rhoncus</figcaption>
-                    </figure>
-                  </label> </div>
-                <div> <input type="checkbox" name="scenario-question-sq-1545-scale" value="2721" id="scenario-question-sq-1545-item-5"><label for="scenario-question-sq-1545-item-5">
-                    <figure><img src="https://images.unsplash.com/photo-1506485338023-6ce5f36692df?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80">
-                      <div>Credit: Jazmin Quaynor</div>
-                      <figcaption>Etiam ultricies nisi vel augue.</figcaption>
-                    </figure>
-                  </label> </div>
-              </div>
-            </div>
-            <p class="text">
-              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-              vel, luctus pulvinar, hendrerit id, lorem.
-            </p>
-          </div>
-        </div>
-        <!--End Survey-->
-        <!-------------------------------------------------------------------------------------------->
-        <!--Start Credits-->
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <p class="text text-small text-italic add-top-margin-large">
-              Credits: <span class="highlight-text">Organization One</span>: Author One and Author Two / <span class="highlight-text">Organization Two</span>: Author Three and Author Four
-            </p>
-          </div>
-        </div>
-        <!--End Credits-->
-        <!-------------------------------------------------------------------------------------------->
-      </div>
-    </div>
-    <div class="footer-container"></div>
-  </div>
-</body>
+  </header>
 
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Transforming SACCOs with <span class="highlight">Inclusive Technology</span></h1>
+          <p class="hero-text">A digital platform addressing financial insecurity, accessibility barriers, and operational inefficiencies through automation, transparency, and inclusive design.</p>
+          <div class="hero-actions">
+            <a href="#features" class="btn-primary">Explore Features</a>
+            <a href="mailto:contact@smartsacco.org" class="btn-secondary">Get Started</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="image/2023.jpg" alt="Mobile banking illustration" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="section problems-section" id="problems">
+      <div class="section-container">
+        <h2 class="section-title">Problems We Solve</h2>
+        <p class="section-subtitle">Addressing key challenges in traditional SACCO systems</p>
+        
+        <div class="problems-grid">
+          <div class="problem-card">
+            <div class="problem-icon danger">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3 class="problem-title">Financial Insecurity</h3>
+            <p class="problem-text">Manual record-keeping leads to errors, fraud, and lost savings.</p>
+          </div>
+          
+          <div class="problem-card">
+            <div class="problem-icon warning">
+              <i class="fas fa-eye-slash"></i>
+            </div>
+            <h3 class="problem-title">Accessibility Barriers</h3>
+            <p class="problem-text">Traditional SACCOs exclude visually impaired users.</p>
+          </div>
+          
+          <div class="problem-card">
+            <div class="problem-icon info">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="problem-title">Operational Inefficiency</h3>
+            <p class="problem-text">Slow, paper-based processes delay transactions.</p>
+          </div>
+          
+          <div class="problem-card">
+            <div class="problem-icon alert">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="problem-title">Lack of Trust</h3>
+            <p class="problem-text">No real-time tracking or audit trails enable fraud.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="section objectives-section">
+      <div class="section-container">
+        <div class="objectives-content">
+          <h2 class="section-title">Our Objectives</h2>
+          <p class="section-subtitle">Driving financial inclusion through technology</p>
+          
+          <div class="objectives-grid">
+            <div class="objective-card primary">
+              <h3 class="objective-title"><i class="fas fa-bullseye"></i> Primary Goals</h3>
+              <ul class="objective-list">
+                <li>Make SACCO services accessible (voice navigation, screen reader support)</li>
+                <li>Automate processes (mobile money integration)</li>
+                <li>Build trust via transparent dashboards</li>
+              </ul>
+            </div>
+            
+            <div class="objective-card secondary">
+              <h3 class="objective-title"><i class="fas fa-chart-line"></i> Secondary Goals</h3>
+              <ul class="objective-list">
+                <li>Expand financial inclusion for marginalized groups</li>
+                <li>Scale regionally across East Africa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section" id="features">
+      <div class="section-container">
+        <h2 class="section-title">Key Features</h2>
+        <p class="section-subtitle">Innovative solutions for modern SACCOs</p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="feature-title">Mobile Money Integration</h3>
+            <p class="feature-text">Seamless deposits and withdrawals through popular mobile money platforms.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-universal-access"></i>
+            </div>
+            <h3 class="feature-title">Voice UI & High-Contrast</h3>
+            <p class="feature-text">Designed for visual accessibility with screen reader support.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="feature-title">Real-Time Tracking</h3>
+            <p class="feature-text">Transparent transaction history and balance updates.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3 class="feature-title">Scalable Cloud Backend</h3>
+            <p class="feature-text">Supports 1,000+ users with enterprise-grade reliability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Slideshow Section -->
+    <section class="section slideshow-section">
+      <div class="section-container">
+        <h2 class="section-title">Feature Highlights</h2>
+        <p class="section-subtitle">See our platform in action</p>
+        
+        <div class="slideshow-container">
+          <!-- Slides -->
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <img src="image/slide-1.jpeg" alt="Mobile Money Integration">
+              <div class="slide-text">
+                <h3>Mobile Money Integration</h3>
+                <p>Seamless deposits and withdrawals through popular mobile money platforms.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <img src="image/slide-2.jpeg" alt="Voice UI & High-Contrast">
+              <div class="slide-text">
+                <h3>Voice UI & High-Contrast</h3>
+                <p>Designed for visual accessibility with screen reader support.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <img src="image/slide-3.jpeg" alt="Real-Time Tracking">
+              <div class="slide-text">
+                <h3>Real-Time Tracking</h3>
+                <p>Transparent transaction history and balance updates.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <img src="image/slide-4.jpeg" alt="Real-Time Tracking">
+              <div class="slide-text">
+                <h3>Real-Time Tracking</h3>
+                <p>Transparent transaction history and balance updates.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <img src="image/slide-5.jpeg" alt="Real-Time Tracking">
+              <div class="slide-text">
+                <h3>Real-Time Tracking</h3>
+                <p>Transparent transaction history and balance updates.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <img src="image/slide-6.jpeg" alt="Real-Time Tracking">
+              <div class="slide-text">
+                <h3>Real-Time Tracking</h3>
+                <p>Transparent transaction history and balance updates.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <img src="image/slide -7.jpeg" alt="Real-Time Tracking">
+              <div class="slide-text">
+                <h3>Real-Time Tracking</h3>
+                <p>Transparent transaction history and balance updates.</p>
+              </div>
+            </div>
+          </div>
+          
+          
+          <!-- Navigation Arrows -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <!-- Slide Indicators -->
+        <div class="dots-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section vision-section">
+      <div class="section-container">
+        <div class="vision-content">
+          <h2 class="section-title">Our Vision</h2>
+          <blockquote class="vision-statement">
+            To empower SACCOs with <span class="highlight">secure, accessible, and efficient</span> financial tools, fostering trust and inclusion for all members, including marginalized communities in East Africa.
+          </blockquote>
+          <div class="vision-cta">
+            <a href="mailto:contact@smartsacco.org" class="btn-primary btn-large">Join Our Mission</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="SmartSacco Home">
+            <img src="image/sacco.jpeg" alt="SmartSacco Logo" class="footer-logo">
+            <span class="brand-name">SmartSacco</span>
+          </a>
+          <p class="footer-tagline">Financial Inclusion for All</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3 class="footer-heading">Product</h3>
+            <ul>
+              <li><a href="index.html">Overview</a></li>
+              <li><a href="widgets.html">Dashboard</a></li>
+              <li><a href="embedding.html">Analytics</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul>
+              <li><a href="widgets.html#team">Our Team</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3 class="footer-heading">Legal</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Security</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/yourusername/SmartSacco" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 SmartSacco. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CSS Styles -->
+  <style>
+    /* CSS variables */
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #10b981;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --info: #3b82f6;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --light-bg: #f3f4f6;
+      --dark-bg: #111827;
+      --white: #ffffff;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: var(--white);
+    }
+    
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .highlight {
+      color: var(--primary);
+    }
+    
+    /* Button styles */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      text-align: center;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background-color: rgba(37, 99, 235, 0.1);
+    }
+    
+    .btn-large {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+    
+    /* Header styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      background-color: var(--white);
+      box-shadow: var(--box-shadow);
+      z-index: 1000;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+    
+    .header-brand {
+      display: flex;
+      align-items: center;
+    }
+    
+    .header-logo {
+      height: 40px;
+      margin-right: 0.75rem;
+    }
+    
+    .brand-name {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    
+    /* Navigation styles */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1001;
+    }
+    
+    .toggle-bar {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: var(--text);
+      margin: 5px 0;
+      transition: var(--transition);
+    }
+    
+    .main-nav {
+      transition: var(--transition);
+    }
+    
+    .nav-list {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-item {
+      margin-left: 1rem;
+      position: relative;
+    }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      color: var(--text-light);
+      transition: var(--transition);
+      border-radius: var(--border-radius);
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-link.active {
+      color: var(--white);
+      background-color: var(--primary);
+    }
+    
+    .nav-icon {
+      margin-right: 0.5rem;
+      font-size: 1rem;
+    }
+    
+    .cta-button {
+      background-color: var(--primary);
+      color: var(--white) !important;
+      padding: 0.5rem 1.5rem;
+    }
+    
+    .cta-button:hover {
+      background-color: var(--primary-dark);
+    }
+    
+    /* Hero section styles */
+    .hero-section {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(16, 185, 129, 0.05));
+    }
+    
+    .hero-container {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    
+    .hero-content {
+      flex: 1;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+    
+    .hero-text {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+    
+    /* Section styles */
+    .section {
+      padding: 4rem 0;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Problems section styles */
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .problem-card {
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+    
+    .problem-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .problem-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .problem-icon.danger {
+      background-color: rgba(239, 68, 68, 0.1);
+      color: var(--danger);
+    }
+    
+    .problem-icon.warning {
+      background-color: rgba(245, 158, 11, 0.1);
+      color: var(--warning);
+    }
+    
+    .problem-icon.info {
+      background-color: rgba(59, 130, 246, 0.1);
+      color: var(--info);
+    }
+    
+    .problem-icon.alert {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: var(--secondary);
+    }
+    
+    .problem-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .problem-text {
+      color: var(--text-light);
+    }
+    
+    /* Objectives section styles */
+    .objectives-section {
+      background-color: var(--light-bg);
+    }
+    
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .objective-card {
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--box-shadow);
+    }
+    
+    .objective-card.primary {
+      border-top: 4px solid var(--primary);
+    }
+    
+    .objective-card.secondary {
+      border-top: 4px solid var(--secondary);
+    }
+    
+    .objective-title {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .objective-title i {
+      margin-right: 0.75rem;
+    }
+    
+    .objective-list {
+      padding-left: 1.5rem;
+    }
+    
+    .objective-list li {
+      position: relative;
+      margin-bottom: 0.75rem;
+      color: var(--text-light);
+    }
+    
+    .objective-list li:before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    
+    /* Features section styles */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .feature-card {
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 1.5rem;
+    }
+    
+    .feature-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-text {
+      color: var(--text-light);
+    }
+    
+    /* Slideshow styles */
+    .slideshow-section {
+      background-color: var(--light-bg);
+    }
+    
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+    
+    .mySlides {
+      display: none;
+    }
+    
+    .slide-content {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .slide-content img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    
+    .slide-text {
+      padding: 2rem;
+      background-color: var(--white);
+    }
+    
+    .slide-text h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Slideshow navigation */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.3);
+    }
+    
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Slideshow indicators */
+    .dots-container {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: var(--primary);
+    }
+    
+    /* Slideshow animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* Vision section styles */
+    .vision-section {
+      background-color: var(--dark-bg);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .vision-statement {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    .vision-statement .highlight {
+      color: var(--secondary);
+    }
+    
+    .vision-cta {
+      margin-top: 2rem;
+    }
+    
+    /* Footer styles */
+    .main-footer {
+      background-color: var(--dark-bg);
+      color: var(--white);
+      padding: 3rem 0 1rem;
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-brand {
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-logo {
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-tagline {
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 300px;
+    }
+    
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+    }
+    
+    .footer-heading {
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+      color: var(--white);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .footer-heading::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--primary);
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-column a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .footer-column a:hover {
+      color: var(--white);
+      padding-left: 5px;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+    
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    
+    .footer-social a:hover {
+      background-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+    }
+    
+    /* Accessibility styles */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    
+    a:focus,
+    button:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+    
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: white;
+      padding: 8px;
+      z-index: 100;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .hero-actions {
+        justify-content: center;
+      }
+      
+      .hero-image {
+        margin-top: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+      
+      .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--white);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 5rem 2rem;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+      
+      .main-nav.active {
+        right: 0;
+      }
+      
+      .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .nav-item {
+        margin: 0 0 1rem 0;
+        width: 100%;
+      }
+      
+      .nav-link {
+        padding: 0.75rem 0;
+        width: 100%;
+      }
+      
+      .mobile-menu-toggle.active .toggle-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      
+      .mobile-menu-toggle.active .toggle-bar:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .mobile-menu-toggle.active .toggle-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+      
+      .section {
+        padding: 3rem 0;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .footer-links {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .slide-content img {
+        height: 300px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-actions {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+      }
+      
+      .footer-links {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-social a {
+        width: 36px;
+        height: 36px;
+      }
+      
+      .slide-content img {
+        height: 200px;
+      }
+      
+      .slide-text {
+        padding: 1rem;
+      }
+    }
+  </style>
+
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      const nav = document.querySelector('.main-nav');
+      
+      toggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        nav.classList.toggle('active');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.header-container') && nav.classList.contains('active')) {
+          toggle.classList.remove('active');
+          nav.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+
+    // Slideshow functionality
+    let slideIndex = 0;
+    let slideInterval;
+    
+    // Initialize slideshow
+    document.addEventListener('DOMContentLoaded', function() {
+      showSlides();
+      startSlideShow();
+      
+      // Pause on hover
+      const slideshow = document.querySelector('.slideshow-container');
+      slideshow.addEventListener('mouseenter', pauseSlideShow);
+      slideshow.addEventListener('mouseleave', startSlideShow);
+    });
+    
+    function startSlideShow() {
+      slideInterval = setInterval(function() {
+        plusSlides(1);
+      }, 5000); // Change slide every 5 seconds
+    }
+    
+    function pauseSlideShow() {
+      clearInterval(slideInterval);
+    }
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n - 1);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      
+      if (n === undefined) {
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+      } else {
+        if (n >= slides.length) {slideIndex = 0}
+        if (n < 0) {slideIndex = slides.length - 1}
+      }
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      
+      slides[slideIndex].style.display = "block";  
+      dots[slideIndex].className += " active";
+    }
+  </script>
+</body>
 </html>

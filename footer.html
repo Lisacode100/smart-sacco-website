@@ -1,15 +1,282 @@
-<div class="banner">
-  <div class="banner-table flex-column">
-    <div class="flex-row">
-      <div class="flex-item flex-column">
-        <h2>This is the footer area</h2>
-        <p class="text add-bottom-margin-large">
-          Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-          augue. <a href="javascript:void(0)">Curabitur ullamcorper ultricies nisi</a>. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-          condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-          vel, luctus pulvinar, hendrerit id, lorem.
-        </p>
+<div class="footer">
+  <div class="footer-container flex-row-space-between">
+    <!-- Footer Left Column -->
+    <div class="footer-brand">
+      <div class="logo-container">
+        <i class="fas fa-hand-holding-usd logo-icon"></i>
+        <span class="logo-text">SmartSacco</span>
+      </div>
+      <p class="footer-tagline">Empowering Financial Inclusion in East Africa</p>
+      <p class="copyright">&copy; 2025 SmartSacco. All rights reserved.</p>
+      
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <a href="#" aria-label="Follow us on Twitter">
+          <i class="fab fa-twitter"></i>
+          <span class="visually-hidden">Twitter</span>
+        </a>
+        <a href="#" aria-label="Connect on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a href="#" aria-label="Like us on Facebook">
+          <i class="fab fa-facebook"></i>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Footer Right Columns -->
+    <div class="footer-grid">
+      <!-- Resources Column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Resources</h3>
+        <ul class="footer-links">
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      
+      <!-- Company Column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </div>
+      
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">GDPR</a></li>
+        </ul>
       </div>
     </div>
   </div>
+  
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="footer-cta">
+      <p>Ready to transform your SACCO?</p>
+      <a href="mailto:contact@smartsacco.org" class="cta-button">
+        <i class="fas fa-envelope"></i> Contact Us
+      </a>
+    </div>
+    <div class="footer-source">
+      <a href="https://github.com/yourusername/SmartSacco" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </div>
 </div>
+
+<style>
+  /* Footer Styles */
+  .footer {
+    background-color: #111827;
+    color: #f3f4f6;
+    padding: 3rem 2rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .footer-brand {
+    flex: 1 1 300px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .logo-icon {
+    font-size: 1.8rem;
+    color: #3b82f6;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .footer-tagline {
+    margin-bottom: 1.5rem;
+    color: #9ca3af;
+    max-width: 300px;
+  }
+  
+  .copyright {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    color: #d1d5db;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+  }
+  
+  .social-links a:hover {
+    color: #3b82f6;
+  }
+  
+  .footer-grid {
+    flex: 2 1 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-heading {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #3b82f6;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.2s, padding-left 0.2s;
+  }
+  
+  .footer-links a:hover {
+    color: #3b82f6;
+    padding-left: 5px;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    padding: 1.5rem 0;
+    margin-top: 1rem;
+  }
+  
+  .footer-cta {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-cta p {
+    margin-bottom: 0.75rem;
+    color: #9ca3af;
+  }
+  
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .cta-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .footer-source {
+    text-align: center;
+  }
+  
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .github-link:hover {
+    color: #3b82f6;
+  }
+  
+  /* Accessibility */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 2rem 1.5rem 0;
+    }
+    
+    .footer-container {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-cta {
+      margin-bottom: 1rem;
+    }
+  }
+</style>
