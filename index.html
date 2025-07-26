@@ -1,200 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Section - Blue Background</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Meta Tags -->
+  <title>SmartSacco |Financial Inclusion for All</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Digital platform transforming SACCOs with accessible financial technology.Accessible, secure, and designed for everyone.">
+  
+  <!-- Preload Resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@600;700&display=swap" as="style">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-        }
 
-        .main-content {
-            width: 100%;
-        }
-
-        .hero-section {
-            background-color: #2563eb; /* Blue background */
-            color: white;
-            padding: 80px 20px;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 16px;
-        }
-
-        .highlight {
-            color: #fbbf24;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-text {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            opacity: 0.9;
-            margin-bottom: 32px;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: #1e40af;
-            padding: 16px 32px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-2px);
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-image img:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-text {
-                font-size: 1.1rem;
-            }
-
-            .hero-actions {
-                justify-content: center;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                padding: 14px 28px;
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-section {
-                padding: 60px 16px;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                max-width: 280px;
-                text-align: center;
-            }
-        }
-    </style>
+  <!-- External CSS -->
+  <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Internal CSS -->
+  <link href="css/frame.css" rel="stylesheet">
+  <link href="css/controls.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Transforming SACCOs with <span class="highlight">Inclusive Technology</span></h1>
-                    <p class="hero-text">A digital platform addressing financial insecurity, accessibility barriers, and operational inefficiencies through automation, transparency, and inclusive design.</p>
-                    <div class="hero-actions">
-                        <a href="#features" class="btn-primary">Explore Features</a>
-                        <a href="mailto:contact@smartsacco.org" class="btn-secondary">Get Started</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="image/2023.jpg" alt="Mobile banking illustration" loading="lazy">
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
+  <!-- Header Section -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-brand">
+        <a href="index.html" aria-label="SmartSacco Home">
+          <img src="image/sacco.jpeg" alt="SmartSacco Logo" class="header-logo">
+          <span class="brand-name">SmartSacco</span>
+        </a>
+      </div>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page"><i class="fas fa-home nav-icon"></i> Overview</a></li>
+          <li class="nav-item"><a href="widgets.html" class="nav-link"><i class="fas fa-tachometer-alt nav-icon"></i> Dashboard</a></li>
+          <li class="nav-item"><a href="embedding.html" class="nav-link"><i class="fas fa-chart-line nav-icon"></i> Analytics</a></li>
+          <li class="nav-item"><a href="widgets.html#team" class="nav-link"><i class="fas fa-users nav-icon"></i> Team</a></li>
+          <li class="nav-item"><a href="mailto:contact@smartsacco.org" class="nav-link cta-button"><i class="fas fa-envelope nav-icon"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Transforming SACCOs with <span class="highlight">Inclusive Technology</span></h1>
+          <p class="hero-text">A digital platform addressing financial insecurity, accessibility barriers, and operational inefficiencies through automation, transparency, and inclusive design.</p>
+          <div class="hero-actions">
+            <a href="#features" class="btn-primary">Explore Features</a>
+            <a href="mailto:contact@smartsacco.org" class="btn-secondary">Get Started</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="image/2023.jpg" alt="Mobile banking illustration" loading="lazy">
+        </div>
+      </div>
+    </section>
 
     <!-- Problems Section -->
     <section class="section problems-section" id="problems">
