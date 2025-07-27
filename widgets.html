@@ -1,217 +1,751 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartSacco | Dashboard</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SmartSacco dashboard for managing SACCO operations">
-  
-  <!-- Preload critical resources -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" as="style">
-  
-  <!-- Font Awesome -->
-  <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
-  
-  <!-- Main CSS -->
-  <link href="main.css" rel="stylesheet">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    :root {
+      --primary: #2B6CB0;
+      --primary-light: #4299E1;
+      --secondary: #9F7AEA;
+      --success: #48BB78;
+      --warning: #ED8936;
+      --danger: #E53E3E;
+      --dark: #2D3748;
+      --light: #F7FAFC;
+      --vibrant-blue: #45B7D1;
+      --vibrant-teal: #4ECDC4;
+      --vibrant-red: #FF6B6B;
+      --vibrant-purple: #9F7AEA;
+      --vibrant-yellow: #F6E05E;
+    }
+    
+    /* Base Styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #4A5568;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #2D3748;
+    }
+    
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Progress Bar */
+    .progress-container {
+      width: 100%;
+      height: 5px;
+      background: #e0e0e0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    
+    .progress-bar {
+      height: 5px;
+      background: linear-gradient(to right, var(--vibrant-blue), var(--vibrant-purple));
+      width: 0%;
+      transition: width 0.1s;
+    }
+    
+    /* Header */
+    .main-header {
+      background: linear-gradient(135deg, var(--vibrant-blue) 0%, var(--vibrant-purple) 100%);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .header-logo img {
+      height: 40px;
+    }
+    
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    /* Back Link */
+    .back-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .back-link:hover {
+      color: var(--vibrant-teal);
+      transform: translateX(-5px);
+    }
+    
+    /* Dashboard Hero */
+    .dashboard-hero {
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 8rem 0;
+      overflow: hidden;
+    }
+    
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(69,183,209,0.9) 0%, rgba(159,122,234,0.9) 100%);
+      z-index: -1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .dashboard-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .dashboard-hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    /* Stats Section */
+    .stats-section {
+      padding: 4rem 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-subtitle {
+      display: inline-block;
+      color: var(--vibrant-blue);
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--vibrant-blue), var(--vibrant-purple));
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+    
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--vibrant-blue), var(--vibrant-purple));
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+    
+    .card-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: white;
+      font-size: 1.8rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.05);}
+      100% {transform: scale(1);}
+    }
+    
+    .stat-card h3 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .stat-label {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    
+    .stat-change {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .stat-change.positive {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: var(--success);
+    }
+    
+    .stat-change.negative {
+      background-color: rgba(239, 68, 68, 0.1);
+      color: var(--danger);
+    }
+    
+    /* Loan Section */
+    .loan-section {
+      padding: 4rem 0;
+      background-color: #F8FAFC;
+    }
+    
+    .loan-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    
+    .custom-dropdown {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .dropdown-toggle:hover {
+      border-color: var(--vibrant-blue);
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+      margin-top: 0.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+    
+    .custom-dropdown.active .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .dropdown-menu a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: var(--gray-800);
+      transition: all 0.3s ease;
+    }
+    
+    .dropdown-menu a:hover {
+      background: var(--gray-100);
+      color: var(--vibrant-blue);
+    }
+    
+    /* Footer */
+    .main-footer {
+      background-color: var(--gray-900);
+      color: black;
+      padding: 3rem 0 1rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-logo img {
+      height: 40px;
+    }
+    
+    .footer-brand .brand-name {
+      font-size: 1.5rem;
+      color: white;
+    }
+    
+    .footer-tagline {
+      color: var(--gray-400);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: green;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: var(--vibrant-blue);
+      transform: translateY(-3px);
+    }
+    
+    .footer-column h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(to right, var(--vibrant-blue), var(--vibrant-purple));
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-column a {
+      color: var(--gray-400);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .footer-column a:hover {
+      color: white;
+      transform: translateX(5px);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid var(--gray-700);
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+    
+    .copyright {
+      color: var(--gray-500);
+      font-size: 0.875rem;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .dashboard-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .dashboard-hero p {
+        font-size: 1.1rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .back-link {
+        position: static;
+        margin-top: 1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .dashboard-hero {
+        padding: 6rem 0;
+      }
+      
+      .dashboard-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Navigation -->
+  <!-- Navigation Progress Indicator -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Header -->
   <header class="main-header">
-    <div class="container">
-      <div class="header-brand">
-        <a href="index.html" aria-label="SmartSacco Home">
-          <img src="image/sacco.jpeg" alt="SmartSacco Logo" class="header-logo">
+    <div class="section-container">
+      <div class="header-content">
+        <a href="index.html" class="header-logo">
+          <img src="image/sacco.jpeg" alt="SmartSacco Logo">
           <span class="brand-name">SmartSacco</span>
         </a>
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span class="toggle-bar"></span>
-          <span class="toggle-bar"></span>
-          <span class="toggle-bar"></span>
-        </button>
+        <a href="index.html" class="back-link animate__animated animate__fadeIn">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
       </div>
-      
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              <i class="fas fa-home"></i>
-              <span class="nav-text">Overview</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="widgets.html" class="nav-link active">
-              <i class="fas fa-tachometer-alt"></i>
-              <span class="nav-text">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="widgets.html#team" class="nav-link">
-              <i class="fas fa-users"></i>
-              <span class="nav-text">Team</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="mailto:contact@smartsacco.org" class="nav-link">
-              <i class="fas fa-envelope"></i>
-              <span class="nav-text">Contact</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </header>
 
   <!-- Main Content -->
   <main class="main-content">
-    <div class="container">
-      <!-- Dashboard Header -->
-      <section class="dashboard-header card">
-        <h1><i class="fas fa-tachometer-alt"></i> SACCO Dashboard</h1>
-        <p>Manage your SACCO operations with these interactive tools and widgets</p>
-      </section>
-      
-      <!-- Stats Overview -->
-      <div class="stats-grid grid">
-        <div class="stat-card card">
-          <div class="stat-label"><i class="fas fa-users"></i> Total Members</div>
-          <div class="stat-value">1,429</div>
-          <div class="stat-change positive"><i class="fas fa-arrow-up"></i> 12% from last month</div>
-        </div>
-        
-        <div class="stat-card card success">
-          <div class="stat-label"><i class="fas fa-hand-holding-usd"></i> Active Loans</div>
-          <div class="stat-value">UGX 197M</div>
-          <div class="stat-change positive"><i class="fas fa-arrow-up"></i> 8% from last month</div>
-        </div>
-        
-        <div class="stat-card card warning">
-          <div class="stat-label"><i class="fas fa-clock"></i> Pending Applications</div>
-          <div class="stat-value">24</div>
-          <div class="stat-change negative"><i class="fas fa-arrow-down"></i> 3 from yesterday</div>
-        </div>
-        
-        <div class="stat-card card danger">
-          <div class="stat-label"><i class="fas fa-exclamation-triangle"></i> Delinquent Loans</div>
-          <div class="stat-value">UGX 12M</div>
-          <div class="stat-change negative"><i class="fas fa-arrow-up"></i> 5% from last month</div>
+    <!-- Dashboard Hero -->
+    <section class="dashboard-hero">
+      <div class="hero-background"></div>
+      <div class="section-container">
+        <div class="hero-content animate__animated animate__fadeInUp">
+          <h1><i class="fas fa-tachometer-alt"></i> SACCO Dashboard</h1>
+          <p>Manage your SACCO operations with these interactive tools and widgets</p>
         </div>
       </div>
-      
-      <!-- Loan Type Selector -->
-      <section class="dashboard-section card">
-        <h2 class="section-title"><i class="fas fa-filter"></i> Loan Type Selector</h2>
-        <p>Choose a loan category to filter relevant data and reports.</p>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="section-container">
+        <div class="section-header animate__animated" data-animation="fadeIn">
+          <span class="section-subtitle">Overview</span>
+          <h2>Key Statistics</h2>
+          <div class="divider"></div>
+        </div>
         
-        <div class="form-group">
-          <label class="form-label">Select Loan Type</label>
-          <div class="custom-dropdown">
-            <div class="dropdown-toggle">
-              <span>Agriculture Loan</span>
-              <i class="fas fa-chevron-down"></i>
+        <div class="stats-grid">
+          <div class="stat-card animate__animated" data-animation="fadeInUp">
+            <div class="card-icon pulse" style="background-color: var(--vibrant-blue);">
+              <i class="fas fa-users"></i>
             </div>
-            <div class="dropdown-menu">
-              <a href="#">Agriculture Loan</a>
-              <a href="#">Business Loan</a>
-              <a href="#">Emergency Loan</a>
-              <a href="#">Education Loan</a>
-              <a href="#">Housing Loan</a>
+            <h3>1,429</h3>
+            <p class="stat-label">Total Members</p>
+            <div class="stat-change positive">
+              <i class="fas fa-arrow-up"></i> 12% from last month
+            </div>
+          </div>
+          
+          <div class="stat-card animate__animated" data-animation="fadeInUp" data-delay="100">
+            <div class="card-icon pulse" style="background-color: var(--success);">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>UGX 197M</h3>
+            <p class="stat-label">Active Loans</p>
+            <div class="stat-change positive">
+              <i class="fas fa-arrow-up"></i> 8% from last month
+            </div>
+          </div>
+          
+          <div class="stat-card animate__animated" data-animation="fadeInUp" data-delay="200">
+            <div class="card-icon pulse" style="background-color: var(--warning);">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>24</h3>
+            <p class="stat-label">Pending Applications</p>
+            <div class="stat-change negative">
+              <i class="fas fa-arrow-down"></i> 3 from yesterday
+            </div>
+          </div>
+          
+          <div class="stat-card animate__animated" data-animation="fadeInUp" data-delay="300">
+            <div class="card-icon pulse" style="background-color: var(--danger);">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3>UGX 12M</h3>
+            <p class="stat-label">Delinquent Loans</p>
+            <div class="stat-change negative">
+              <i class="fas fa-arrow-up"></i> 5% from last month
             </div>
           </div>
         </div>
-      </section>
-      
-      <!-- Team Section -->
-      <section class="team-section" id="team">
-        <h2 class="section-title"><i class="fas fa-users"></i> Project Team</h2>
-        <p>Meet the team behind SmartSacco's development and implementation.</p>
+      </div>
+    </section>
+
+    <!-- Loan Section -->
+    <section class="loan-section">
+      <div class="section-container">
+        <div class="section-header animate__animated" data-animation="fadeIn">
+          <span class="section-subtitle">Loan Management</span>
+          <h2>Loan Type Selector</h2>
+          <div class="divider"></div>
+          <p class="section-description">Choose a loan category to filter relevant data and reports</p>
+        </div>
         
-        <div class="team-grid grid">
-          <div class="team-card card">
-            <img src="image/ben.webp" alt="Team Member" class="team-avatar">
-            <h3 class="team-name">Odyek Benard</h3>
-            <p class="team-role">Project Lead</p>
-            <p>Oversees all SACCO operations and strategy</p>
-          </div>
-          
-          <div class="team-card card">
-            <img src="image/lisa.webp" alt="Team Member" class="team-avatar">
-            <h3 class="team-name">Ageno Elizabeth</h3>
-            <p class="team-role">UX Designer</p>
-            <p>Designs accessible interfaces for all users</p>
-          </div>
-          
-          <div class="team-card card">
-            <img src="image/tino.webp" alt="Team Member" class="team-avatar">
-            <h3 class="team-name">Tino Zoe</h3>
-            <p class="team-role">Frontend Developer</p>
-            <p>Builds the member-facing applications</p>
-          </div>
-          
-          <div class="team-card card">
-            <img src="image/lydiajpg.jpg" alt="Team Member" class="team-avatar">
-            <h3 class="team-name">Lydia</h3>
-            <p class="team-role">Backend Developer</p>
-            <p>Develops core banking and loan systems</p>
+        <div class="loan-card animate__animated" data-animation="fadeInUp">
+          <div class="form-group">
+            <label class="form-label">Select Loan Type</label>
+            <div class="custom-dropdown">
+              <div class="dropdown-toggle">
+                <span>Agriculture Loan</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#">Agriculture Loan</a>
+                <a href="#">Business Loan</a>
+                <a href="#">Emergency Loan</a>
+                <a href="#">Education Loan</a>
+                <a href="#">Housing Loan</a>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="main-footer">
-    <div class="container">
-      <div class="footer-grid grid">
+    <div class="section-container">
+      <div class="footer-content">
         <div class="footer-brand">
-          <a href="index.html" aria-label="SmartSacco Home">
-            <img src="image/sacco.jpeg" alt="SmartSacco Logo" class="footer-logo">
-          </a>
-          <p class="footer-tagline">Financial Inclusion for All</p>
+          <div class="footer-logo">
+            <img src="image/sacco.jpeg" alt="SmartSacco Logo">
+            <span class="brand-name">SmartSacco</span>
+          </div>
+          <p class="footer-tagline">Transforming SACCOs through innovative technology since 2024. Financial inclusion for all, especially the visually impaired.</p>
           <div class="social-links">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         
-        <div class="footer-links">
-          <div class="footer-column">
-            <h3 class="footer-heading">Product</h3>
-            <ul>
-              <li><a href="index.html">Overview</a></li>
-              <li><a href="widgets.html">Dashboard</a></li>
-              <li><a href="embedding.html">Analytics</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-column">
-            <h3 class="footer-heading">Company</h3>
-            <ul>
-              <li><a href="widgets.html#team">Our Team</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="widgets.html">Dashboard</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="loans.html">Loan Management</a></li>
+            <li><a href="savings.html">Savings Accounts</a></li>
+            <li><a href="reports.html">Financial Reports</a></li>
+            <li><a href="mobile.html">Mobile Banking</a></li>
+            <li><a href="accessibility.html">Accessibility Features</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="help.html">Help Center</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="tel:+256778501066"><i class="fas fa-phone"></i> +256 778 501066</a></li>
+          </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p class="copyright">&copy; 2025 SmartSacco. All rights reserved.</p>
+        <p class="copyright">&copy; 2025 SmartSacco. All rights reserved. Born out of Makerere University's innovation hub.</p>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="main.js"></script>
+  <script>
+    // Scroll progress indicator
+    window.onscroll = function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+    
+    // Dropdown functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+          const dropdown = this.closest('.custom-dropdown');
+          dropdown.classList.toggle('active');
+          
+          // Close other open dropdowns
+          document.querySelectorAll('.custom-dropdown').forEach(dd => {
+            if (dd !== dropdown) {
+              dd.classList.remove('active');
+            }
+          });
+        });
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.custom-dropdown')) {
+          document.querySelectorAll('.custom-dropdown').forEach(dd => {
+            dd.classList.remove('active');
+          });
+        }
+      });
+      
+      // Initialize animations
+      const animateOnScroll = function() {
+        const elements = document.querySelectorAll('[data-animation]');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const animation = entry.target.getAttribute('data-animation');
+              const delay = entry.target.getAttribute('data-delay') || 0;
+              
+              setTimeout(() => {
+                entry.target.classList.add('animate__animated', `animate__${animation}`);
+              }, delay);
+              
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+        
+        elements.forEach(element => {
+          observer.observe(element);
+        });
+      };
+      
+      animateOnScroll();
+    });
+  </script>
 </body>
 </html>

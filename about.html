@@ -5,38 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About SmartSacco | Financial Inclusion for All</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
-  <header class="main-header">
-    <!-- ADD BACK LINK HERE -->
+  <!-- Navigation Progress Indicator -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
 
-    <!-- Your header content here -->
+  <header class="main-header">
+    <!-- Header content would go here -->
   </header>
 
-
   <main class="main-content">
-    <!-- Hero Section -->
+    <!-- Hero Section with Parallax Effect -->
     <section class="about-hero">
+      <div class="hero-background"></div>
       <div class="section-container">
-      
-        <h1>Our Story & Mission</h1>
-        <p>Transforming SACCOs through innovative technology since 2024</p>
-        <div class="hero-scroll-indicator">
-          <i class="fas fa-chevron-down"></i>
+        <a href="index.html" class="back-link white-link animate__animated animate__fadeIn">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <div class="hero-content animate__animated animate__fadeInUp">
+          <h1>Our Story & Mission</h1>
+          <p>Transforming SACCOs through innovative technology since 2024</p>
+          <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+          </div>
         </div>
       </div>
     </section>
     
-
     <!-- About Section -->
     <section class="about-section">
       <div class="section-container">
-          <a href="index.html" class="back-link white-link">
-      <i class="fas fa-arrow-left"></i> Back to Home
-    </a>
-        <div class="section-header">
+        <div class="section-header animate__animated" data-animation="fadeIn">
           <span class="section-subtitle">About Us</span>
           <h2>Who We Are</h2>
           <div class="divider"></div>
@@ -44,24 +48,24 @@
         
         <div class="about-grid">
           <div class="about-content">
-            <div class="about-card">
-              <div class="card-icon" style="background-color: #FF6B6B;">
+            <div class="about-card animate__animated" data-animation="fadeInUp">
+              <div class="card-icon pulse" style="background-color: #FF6B6B;">
                 <i class="fas fa-heart"></i>
               </div>
               <h3>Our Purpose</h3>
               <p>At SmartSacco, we believe no one should be excluded from financial security, especially the visually impaired. Born out of Makerere University's innovation hub, we have the vision to transform SACCOs with accessible technology.</p>
             </div>
             
-            <div class="about-card">
-              <div class="card-icon" style="background-color: #4ECDC4;">
+            <div class="about-card animate__animated" data-animation="fadeInUp" data-delay="100">
+              <div class="card-icon pulse" style="background-color: #4ECDC4;">
                 <i class="fas fa-eye"></i>
               </div>
               <h3>Our Why</h3>
               <p>We watched visually impaired members struggle with paper ledgers, reliance on others, and fraud. Today, they use voice commands to deposit via MTN Mobile Money, check balances, and more, all without sight.</p>
             </div>
             
-            <div class="about-card">
-              <div class="card-icon" style="background-color: #45B7D1;">
+            <div class="about-card animate__animated" data-animation="fadeInUp" data-delay="200">
+              <div class="card-icon pulse" style="background-color: #45B7D1;">
                 <i class="fas fa-road"></i>
               </div>
               <h3>Our Journey</h3>
@@ -69,174 +73,208 @@
             </div>
           </div>
           
-          <div class="about-image">
+          <div class="about-image animate__animated" data-animation="fadeInRight">
             <div class="image-frame">
               <img src="image/team-working.jpg" alt="SmartSacco team working together">
               <div class="frame-decoration"></div>
+              <div class="image-overlay">
+                <span>Since 2024</span>
+                <h4>Building Financial Inclusion</h4>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Values Section -->
+    <!-- Values Section with Animated Cards -->
     <section class="values-section">
       <div class="section-container">
-        <div class="section-header">
+        <div class="section-header animate__animated" data-animation="fadeIn">
           <span class="section-subtitle">Our Foundation</span>
           <h2>Core Values</h2>
           <div class="divider"></div>
         </div>
         
         <div class="values-grid">
-          <div class="value-card" style="background-color: #FFF5F5;">
-            <div class="value-icon" style="color: #FF6B6B;">
+          <div class="value-card animate__animated" data-animation="flipInX" style="background-color: #FFF5F5;">
+            <div class="value-icon spin" style="color: #FF6B6B;">
               <i class="fas fa-shield-alt"></i>
             </div>
             <h3>Transparency</h3>
             <p>Open books, clear terms, and honest communication in all we do.</p>
+            <div class="value-number">01</div>
           </div>
           
-          <div class="value-card" style="background-color: #F0FFF4;">
-            <div class="value-icon" style="color: #48BB78;">
+          <div class="value-card animate__animated" data-animation="flipInX" data-delay="100" style="background-color: #F0FFF4;">
+            <div class="value-icon spin" style="color: #48BB78;">
               <i class="fas fa-universal-access"></i>
             </div>
             <h3>Inclusivity</h3>
             <p>Designing for all abilities, because financial access is a right.</p>
+            <div class="value-number">02</div>
           </div>
           
-          <div class="value-card" style="background-color: #EBF8FF;">
-            <div class="value-icon" style="color: #4299E1;">
+          <div class="value-card animate__animated" data-animation="flipInX" data-delay="200" style="background-color: #EBF8FF;">
+            <div class="value-icon spin" style="color: #4299E1;">
               <i class="fas fa-lightbulb"></i>
             </div>
             <h3>Innovation</h3>
             <p>Continually improving to solve real problems for our members.</p>
+            <div class="value-number">03</div>
           </div>
           
-          <div class="value-card" style="background-color: #FAF5FF;">
-            <div class="value-icon" style="color: #9F7AEA;">
+          <div class="value-card animate__animated" data-animation="flipInX" data-delay="300" style="background-color: #FAF5FF;">
+            <div class="value-icon spin" style="color: #9F7AEA;">
               <i class="fas fa-hands-helping"></i>
             </div>
             <h3>Member Focus</h3>
             <p>Your success is our success - we measure our impact by yours.</p>
+            <div class="value-number">04</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Section with Lightbox -->
     <section class="gallery-section">
       <div class="section-container">
-        <div class="section-header">
+        <div class="section-header animate__animated" data-animation="fadeIn">
           <span class="section-subtitle">See Our Work</span>
           <h2>SmartSacco in Action</h2>
           <div class="divider"></div>
         </div>
         
         <div class="gallery-grid">
-          <div class="gallery-item" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('image/training-session.jpg');">
+          <div class="gallery-item animate__animated" data-animation="zoomIn" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('image/training-session.jpg');">
             <div class="gallery-content">
+              <div class="gallery-badge">Training</div>
               <h3>Member Training</h3>
               <p>Empowering users with hands-on education</p>
-              <button class="gallery-btn">View More</button>
+              <button class="gallery-btn" data-image="image/training-session.jpg" data-title="Member Training">View More</button>
             </div>
           </div>
           
-          <div class="gallery-item" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('image/mobile-app.jpg');">
+          <div class="gallery-item animate__animated" data-animation="zoomIn" data-delay="100" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('image/mobile-app.jpg');">
             <div class="gallery-content">
+              <div class="gallery-badge">Technology</div>
               <h3>Mobile App</h3>
               <p>Accessible banking at your fingertips</p>
-              <button class="gallery-btn">View More</button>
+              <button class="gallery-btn" data-image="image/mobile-app.jpg" data-title="Mobile App">View More</button>
             </div>
           </div>
           
-          <div class="gallery-item" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('image/community-event.jpg');">
+          <div class="gallery-item animate__animated" data-animation="zoomIn" data-delay="200" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('image/community-event.jpg');">
             <div class="gallery-content">
+              <div class="gallery-badge">Community</div>
               <h3>Community Events</h3>
               <p>Building financial literacy together</p>
-              <button class="gallery-btn">View More</button>
+              <button class="gallery-btn" data-image="image/community-event.jpg" data-title="Community Events">View More</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-   <!-- Team Section -->
-<section class="team-section">
-  <div class="section-container">
-    <div class="section-header">
-      <span class="section-subtitle">Meet The Team</span>
-      <h2>Our Leadership</h2>
-      <div class="divider"></div>
-      <p class="section-description">Passionate individuals driving financial inclusion across East Africa</p>
-    </div>
-    
-    <div class="team-grid">
-      <!-- Team Member 1 -->
-      <div class="team-member">
-        <div class="member-image">
-          <img src="https://ui-avatars.com/api/?name=Odyek+Benard&background=45B7D1&color=fff&size=200" alt="Odyek Benard">
-          <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+    <!-- Team Section with Enhanced Cards -->
+    <section class="team-section">
+      <div class="section-container">
+        <div class="section-header animate__animated" data-animation="fadeIn">
+          <span class="section-subtitle">Meet The Team</span>
+          <h2>Our Leadership</h2>
+          <div class="divider"></div>
+          <p class="section-description">Passionate individuals driving financial inclusion across East Africa</p>
+        </div>
+        
+        <div class="team-grid">
+          <!-- Team Member 1 -->
+          <div class="team-member animate__animated" data-animation="fadeInUp">
+            <div class="member-image">
+              <img src="https://ui-avatars.com/api/?name=Odyek+Benard&background=45B7D1&color=fff&size=200" alt="Odyek Benard">
+              <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <h3>Odyek Benard</h3>
+            <p class="position">CEO & Founder</p>
+            <p class="bio">Visionary leader with a passion for inclusive fintech solutions.</p>
+            <div class="member-skills">
+              <span>Leadership</span>
+              <span>Strategy</span>
+              <span>Innovation</span>
+            </div>
+          </div>
+          
+          <!-- Team Member 2 -->
+          <div class="team-member animate__animated" data-animation="fadeInUp" data-delay="100">
+            <div class="member-image">
+              <img src="https://ui-avatars.com/api/?name=Ageno+Elizabeth&background=9F7AEA&color=fff&size=200" alt="Jane Nakato">
+              <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <h3>Ageno Elizabeth</h3>
+            <p class="position">Chief Technology Officer (CTO)</p>
+            <p class="bio">Leads our technical innovation with a focus on accessible fintech solutions.</p>
+            <div class="member-skills">
+              <span>Technology</span>
+              <span>Development</span>
+              <span>Accessibility</span>
+            </div>
+          </div>
+          
+          <!-- Team Member 3 -->
+          <div class="team-member animate__animated" data-animation="fadeInUp" data-delay="200">
+            <div class="member-image">
+              <img src="https://ui-avatars.com/api/?name=Tino+Ramona&background=FF6B6B&color=fff&size=200" alt="Robert Mugisha">
+              <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <h3>Tino Zoe Ramona</h3>
+            <p class="position">Head of Operations</p>
+            <p class="bio">Ensuring seamless service delivery.</p>
+            <div class="member-skills">
+              <span>Operations</span>
+              <span>Management</span>
+              <span>Logistics</span>
+            </div>
+          </div>
+          
+          <!-- Team Member 4 -->
+          <div class="team-member animate__animated" data-animation="fadeInUp" data-delay="300">
+            <div class="member-image">
+              <img src="https://ui-avatars.com/api/?name=Nangobi+Lydia&background=4ECDC4&color=fff&size=200" alt="Sarah Kintu">
+              <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <h3>Nangobi Lydia</h3>
+            <p class="position">Accessibility Lead</p>
+            <p class="bio">Championing inclusive design for all users.</p>
+            <div class="member-skills">
+              <span>UX Design</span>
+              <span>Accessibility</span>
+              <span>User Research</span>
+            </div>
           </div>
         </div>
-        <h3>Odyek Benard</h3>
-        <p class="position">CEO & Founder</p>
-        <p class="bio">Visionary leader with a passion for inclusive fintech solutions.</p>
       </div>
-      
-      <!-- Team Member 2 -->
-      <div class="team-member">
-        <div class="member-image">
-          <img src="https://ui-avatars.com/api/?name=Ageno+Elizabeth&background=9F7AEA&color=fff&size=200" alt="Jane Nakato">
-          <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <h3>Ageno Elizabeth</h3>
-        <p class="position">Chief Technology Officer (CTO)</p>
-        <p class="bio">Leads our technical innovation with a focus on accessible fintech solutions.</p>
-      </div>
-      
-      <!-- Team Member 3 -->
-      <div class="team-member">
-        <div class="member-image">
-          <img src="https://ui-avatars.com/api/?name=Tino+Ramona&background=FF6B6B&color=fff&size=200" alt="Robert Mugisha">
-          <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <h3>Tino Zoe Ramona</h3>
-        <p class="position">Head of Operations</p>
-        <p class="bio">Ensuring seamless service delivery.</p>
-      </div>
-      
-      <!-- Team Member 4 -->
-      <div class="team-member">
-        <div class="member-image">
-          <img src="https://ui-avatars.com/api/?name=Nangobi+Lydia&background=4ECDC4&color=fff&size=200" alt="Sarah Kintu">
-          <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <h3>Nangobi Lydia</h3>
-        <p class="position">Accessibility Lead</p>
-        <p class="bio">Championing inclusive design for all users.</p>
-      </div>
-    </div>
-  </div>
-</section>
-    <!-- Impact Section -->
+    </section>
+
+    <!-- Impact Section with Counter Animation -->
     <section class="impact-section">
       <div class="section-container">
-          <div class="section-container">
-  
         <div class="impact-content">
-          <div class="impact-text">
+          <div class="impact-text animate__animated" data-animation="fadeInLeft">
             <span class="section-subtitle">Our Reach</span>
             <h2>Making an Impact</h2>
             <div class="divider"></div>
@@ -244,9 +282,9 @@
             <button class="impact-btn">Read Success Stories</button>
           </div>
           
-          <div class="stats-grid">
+          <div class="stats-grid animate__animated" data-animation="fadeInRight">
             <div class="stat-card" style="background-color: #FFEEF2;">
-              <h3>10,000+</h3>
+              <h3 class="counter" data-target="10000">0</h3>
               <p>Members Served</p>
               <div class="stat-icon">
                 <i class="fas fa-users" style="color: #FF6B6B;"></i>
@@ -254,7 +292,7 @@
             </div>
             
             <div class="stat-card" style="background-color: #E6FFFA;">
-              <h3>50+</h3>
+              <h3 class="counter" data-target="50">0</h3>
               <p>SACCO Partners</p>
               <div class="stat-icon">
                 <i class="fas fa-handshake" style="color: #38B2AC;"></i>
@@ -262,7 +300,7 @@
             </div>
             
             <div class="stat-card" style="background-color: #EBF4FF;">
-              <h3>85%</h3>
+              <h3 class="counter" data-target="85">0</h3>
               <p>Mobile Adoption</p>
               <div class="stat-icon">
                 <i class="fas fa-mobile-alt" style="color: #4299E1;"></i>
@@ -270,7 +308,7 @@
             </div>
             
             <div class="stat-card" style="background-color: #FAF5FF;">
-              <h3>100%</h3>
+              <h3 class="counter" data-target="100">0</h3>
               <p>Accessibility</p>
               <div class="stat-icon">
                 <i class="fas fa-universal-access" style="color: #9F7AEA;"></i>
@@ -281,10 +319,10 @@
       </div>
     </section>
 
-    <!-- Support Section -->
+    <!-- Support Section with Floating Animation -->
     <section class="support-section">
       <div class="section-container">
-        <div class="section-header">
+        <div class="section-header animate__animated" data-animation="fadeIn">
           <span class="section-subtitle">We're Here For You</span>
           <h2>24/7 Human Support</h2>
           <div class="divider"></div>
@@ -293,33 +331,55 @@
         
         <div class="support-grid">
           <!-- Voice Support -->
-          <div class="support-card" style="border-top: 4px solid #FF6B6B;">
+          <div class="support-card floating animate__animated" data-animation="fadeInUp" style="border-top: 4px solid #FF6B6B;">
             <div class="support-icon" style="background-color: #FF6B6B;">
               <i class="fas fa-phone-alt"></i>
             </div>
             <h3>Voice & Call Support</h3>
             <p>Speak directly to our team for help with transactions, accessibility, or emergencies.</p>
             <a href="tel:+256778501066" class="btn-support">Call Now: +256 778 501066</a>
+            <div class="support-wave"></div>
           </div>
           
           <!-- Chat Support -->
-          <div class="support-card" style="border-top: 4px solid #4ECDC4;">
+          <div class="support-card floating animate__animated" data-animation="fadeInUp" data-delay="100" style="border-top: 4px solid #4ECDC4;">
             <div class="support-icon" style="background-color: #4ECDC4;">
               <i class="fas fa-comments"></i>
             </div>
             <h3>Live Chat</h3>
             <p>Text-based support in the app for quick questions and assistance.</p>
             <button class="btn-support" onclick="openChat()">Start Chat</button>
+            <div class="support-wave"></div>
           </div>
           
           <!-- Accessibility Specialists -->
-          <div class="support-card" style="border-top: 4px solid #45B7D1;">
+          <div class="support-card floating animate__animated" data-animation="fadeInUp" data-delay="200" style="border-top: 4px solid #45B7D1;">
             <div class="support-icon" style="background-color: #45B7D1;">
               <i class="fas fa-universal-access"></i>
             </div>
             <h3>Accessibility Team</h3>
             <p>Dedicated staff trained to guide visually impaired users through every feature.</p>
             <a href="mailto:accessibility@smartsacco.org" class="btn-support">Email Us</a>
+            <div class="support-wave"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="section-container">
+        <div class="newsletter-box animate__animated" data-animation="zoomIn">
+          <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest updates and financial tips</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+          <div class="newsletter-image">
+            <img src="image/newsletter.svg" alt="Newsletter illustration">
           </div>
         </div>
       </div>
@@ -327,9 +387,15 @@
   </main>
 
   <footer class="main-footer">
-    <!-- Your footer content here -->
-     
+    <!-- Footer content would go here -->
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="imageLightbox">
+    <span class="close-btn">&times;</span>
+    <img class="lightbox-content" id="lightboxImage">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
 
   <style>
     :root {
@@ -341,8 +407,6 @@
       --danger: #E53E3E;
       --dark: #2D3748;
       --light: #F7FAFC;
-      
-      /* New vibrant colors */
       --vibrant-blue: #45B7D1;
       --vibrant-teal: #4ECDC4;
       --vibrant-red: #FF6B6B;
@@ -350,10 +414,12 @@
       --vibrant-yellow: #F6E05E;
     }
     
+    /* Base Styles */
     body {
       font-family: 'Open Sans', sans-serif;
       color: #4A5568;
       line-height: 1.6;
+      overflow-x: hidden;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -362,62 +428,69 @@
       color: #2D3748;
     }
     
-    /* Add to your existing styles */
-.page-navigation {
-  padding: 15px 5%;
-  background: #f8fafc;
-}
-
-.back-link {
-  color: #2B6CB0;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-}
-
-.back-link:hover {
-  color: #1E4E8C;
-  transform: translateX(-3px);
-}
-
-/* For white links in hero */
-.about-hero .back-link {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-}
     .section-container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
     
-    /* Hero Section */
+    /* Progress Bar */
+    .progress-container {
+      width: 100%;
+      height: 5px;
+      background: #e0e0e0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    
+    .progress-bar {
+      height: 5px;
+      background: linear-gradient(to right, var(--vibrant-blue), var(--vibrant-purple));
+      width: 0%;
+      transition: width 0.1s;
+    }
+    
+    /* Hero Section with Parallax */
     .about-hero {
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 10rem 0;
+      overflow: hidden;
+    }
+    
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: linear-gradient(135deg, rgba(69,183,209,0.9) 0%, rgba(159,122,234,0.9) 100%), 
                   url('image/about-hero-bg.jpg');
       background-size: cover;
       background-position: center;
-      color: white;
-      text-align: center;
-      padding: 8rem 0;
+      background-attachment: fixed;
+      z-index: -1;
+    }
+    
+    .hero-content {
       position: relative;
+      z-index: 2;
     }
     
     .about-hero h1 {
       font-size: 3.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     
     .about-hero p {
       font-size: 1.5rem;
       max-width: 700px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 3rem;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     
     .hero-scroll-indicator {
@@ -426,6 +499,7 @@
       left: 50%;
       transform: translateX(-50%);
       animation: bounce 2s infinite;
+      font-size: 1.5rem;
     }
     
     @keyframes bounce {
@@ -434,10 +508,30 @@
       60% {transform: translateY(-10px) translateX(-50%);}
     }
     
+    /* Back Link */
+    .back-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      z-index: 10;
+    }
+    
+    .back-link:hover {
+      color: var(--vibrant-teal);
+      transform: translateX(-5px);
+    }
+    
     /* Section Header Styles */
     .section-header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
     
     .section-subtitle {
@@ -453,6 +547,8 @@
     .section-header h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
     }
     
     .divider {
@@ -467,40 +563,64 @@
       max-width: 700px;
       margin: 0 auto;
       font-size: 1.1rem;
+      color: #718096;
     }
     
     /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 4rem;
       align-items: center;
     }
     
     .about-card {
       background: white;
-      border-radius: 10px;
-      padding: 2rem;
+      border-radius: 12px;
+      padding: 2.5rem;
       margin-bottom: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--vibrant-blue), var(--vibrant-purple));
     }
     
     .about-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     }
     
     .card-icon {
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 1.5rem;
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.05);}
+      100% {transform: scale(1);}
     }
     
     .about-card h3 {
@@ -515,32 +635,63 @@
     
     .image-frame {
       position: relative;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.1);
     }
     
     .image-frame img {
       width: 100%;
       height: auto;
       display: block;
+      transition: transform 0.5s ease;
+    }
+    
+    .image-frame:hover img {
+      transform: scale(1.05);
     }
     
     .frame-decoration {
       position: absolute;
       width: 100%;
       height: 100%;
-      border: 5px solid var(--vibrant-teal);
-      border-radius: 10px;
-      top: 20px;
-      left: 20px;
+      border: 8px solid var(--vibrant-teal);
+      border-radius: 12px;
+      top: 25px;
+      left: 25px;
       z-index: -1;
+      opacity: 0.7;
+    }
+    
+    .image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+    }
+    
+    .image-overlay span {
+      display: inline-block;
+      background: var(--vibrant-blue);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .image-overlay h4 {
+      font-size: 1.5rem;
+      margin: 0;
     }
     
     /* Values Section */
     .values-section {
       background-color: #F8FAFC;
-      padding: 5rem 0;
+      padding: 6rem 0;
     }
     
     .values-grid {
@@ -550,28 +701,57 @@
     }
     
     .value-card {
-      padding: 2rem;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
+      padding: 2.5rem;
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+      position: relative;
+      overflow: hidden;
     }
     
     .value-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-10px) scale(1.02);
     }
     
     .value-icon {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
+      transition: transform 0.4s ease;
+    }
+    
+    .spin {
+      animation: spin 4s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
     }
     
     .value-card h3 {
       font-size: 1.3rem;
       margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .value-card p {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .value-number {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.1);
+      z-index: 1;
     }
     
     /* Gallery Section */
     .gallery-section {
-      padding: 5rem 0;
+      padding: 6rem 0;
     }
     
     .gallery-grid {
@@ -581,13 +761,13 @@
     }
     
     .gallery-item {
-      height: 350px;
-      border-radius: 10px;
+      height: 400px;
+      border-radius: 12px;
       background-size: cover;
       background-position: center;
       position: relative;
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
     }
     
     .gallery-item:hover {
@@ -601,93 +781,131 @@
       right: 0;
       padding: 2rem;
       color: white;
+      transform: translateY(100px);
+      transition: transform 0.4s ease;
       background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    }
+    
+    .gallery-item:hover .gallery-content {
+      transform: translateY(0);
+    }
+    
+    .gallery-badge {
+      display: inline-block;
+      background: var(--vibrant-blue);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
     
     .gallery-content h3 {
       color: white;
       margin-bottom: 0.5rem;
+      font-size: 1.5rem;
     }
     
     .gallery-btn {
       background: white;
       color: var(--dark);
       border: none;
-      padding: 0.5rem 1.5rem;
+      padding: 0.8rem 2rem;
       border-radius: 50px;
       font-weight: 600;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     
     .gallery-btn:hover {
       background: var(--vibrant-teal);
       color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
     
     /* Team Section */
     .team-section {
       background-color: #F8FAFC;
-      padding: 5rem 0;
+      padding: 6rem 0;
     }
     
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
     
     .team-member {
       background: white;
-      border-radius: 10px;
-      padding: 2rem;
+      border-radius: 12px;
+      padding: 2.5rem;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .team-member::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, var(--vibrant-blue), var(--vibrant-purple));
     }
     
     .team-member:hover {
       transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     }
     
     .member-image {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       margin: 0 auto 1.5rem;
       position: relative;
       overflow: hidden;
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     
     .member-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    .team-member:hover .member-image img {
+      transform: scale(1.1);
     }
     
     .social-links {
       position: absolute;
-      bottom: -20px;
+      bottom: -50px;
       left: 0;
       right: 0;
       display: flex;
       justify-content: center;
-      opacity: 0;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
     }
     
     .team-member:hover .social-links {
-      bottom: 10px;
-      opacity: 1;
+      bottom: 20px;
     }
     
     .social-links a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       background: var(--vibrant-blue);
       color: white;
       border-radius: 50%;
@@ -697,37 +915,77 @@
     
     .social-links a:hover {
       background: var(--vibrant-purple);
-      transform: translateY(-3px);
+      transform: translateY(-5px) scale(1.1);
     }
     
     .team-member h3 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 2;
     }
     
     .position {
       color: var(--vibrant-blue);
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
     }
     
     .bio {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #718096;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .member-skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .member-skills span {
+      background: var(--gray-100);
+      color: var(--dark);
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
     }
     
     /* Impact Section */
     .impact-section {
-      padding: 5rem 0;
+      padding: 6rem 0;
       background: linear-gradient(135deg, var(--vibrant-blue) 0%, var(--vibrant-purple) 100%);
       color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .impact-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('image/dots-pattern.png');
+      opacity: 0.1;
     }
     
     .impact-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 4rem;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
     
     .impact-text h2, 
@@ -744,18 +1002,22 @@
       background: white;
       color: var(--vibrant-blue);
       border: none;
-      padding: 0.8rem 2rem;
+      padding: 1rem 2.5rem;
       border-radius: 50px;
       font-weight: 600;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
     
     .impact-btn:hover {
       background: rgba(255,255,255,0.9);
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
     
     .stats-grid {
@@ -766,36 +1028,39 @@
     
     .stat-card {
       padding: 2rem;
-      border-radius: 10px;
+      border-radius: 12px;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
+      position: relative;
+      overflow: hidden;
     }
     
     .stat-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-10px);
     }
     
     .stat-card h3 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
       color: var(--dark);
+      font-weight: 700;
     }
     
     .stat-card p {
       color: #4A5568;
       font-weight: 600;
+      margin-bottom: 1rem;
     }
     
     .stat-icon {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-top: 1rem;
     }
-
-    
     
     /* Support Section */
     .support-section {
-      padding: 5rem 0;
+      padding: 6rem 0;
+      background-color: #F8FAFC;
     }
     
     .support-grid {
@@ -806,52 +1071,204 @@
     
     .support-card {
       background: white;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% {transform: translateY(0px);}
+      50% {transform: translateY(-10px);}
+      100% {transform: translateY(0px);}
     }
     
     .support-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     }
     
     .support-icon {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.5rem;
+      margin: 0 auto 1.5rem;
       color: white;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     
     .support-card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .support-card p {
+      text-align: center;
+      margin-bottom: 2rem;
     }
     
     .btn-support {
-      display: inline-block;
+      display: block;
       background: var(--dark);
       color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
+      padding: 1rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      margin-top: 1.5rem;
+      margin: 0 auto;
       transition: all 0.3s ease;
+      text-align: center;
+      max-width: 200px;
     }
     
     .btn-support:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .support-wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(to right, var(--vibrant-blue), var(--vibrant-purple));
+      opacity: 0.7;
+    }
+    
+    /* Newsletter Section */
+    .newsletter-section {
+      padding: 6rem 0;
+    }
+    
+    .newsletter-box {
+      background: linear-gradient(135deg, var(--vibrant-blue) 0%, var(--vibrant-purple) 100%);
+      border-radius: 12px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      color: white;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .newsletter-content h2 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .newsletter-content p {
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    
+    .newsletter-form button {
+      background: var(--vibrant-red);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter-form button:hover {
+      background: #e05555;
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .newsletter-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      overflow: auto;
+    }
+    
+    .lightbox-content {
+      display: block;
+      margin: 60px auto;
+      max-width: 80%;
+      max-height: 80%;
+      border: 3px solid white;
+      border-radius: 8px;
+    }
+    
+    .lightbox-caption {
+      margin: 15px auto;
+      max-width: 80%;
+      text-align: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .close-btn:hover {
+      color: var(--vibrant-red);
     }
     
     /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .about-hero h1 {
+        font-size: 3rem;
+      }
+      
+      .impact-content {
+        gap: 3rem;
+      }
+    }
+    
     @media (max-width: 992px) {
       .about-hero h1 {
         font-size: 2.8rem;
@@ -865,6 +1282,14 @@
         text-align: center;
         margin-bottom: 3rem;
       }
+      
+      .newsletter-box {
+        grid-template-columns: 1fr;
+      }
+      
+      .newsletter-image {
+        display: none;
+      }
     }
     
     @media (max-width: 768px) {
@@ -874,16 +1299,21 @@
       
       .about-image {
         order: -1;
+        margin-bottom: 3rem;
       }
       
       .section-header h2 {
         font-size: 2rem;
       }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
     }
     
     @media (max-width: 576px) {
       .about-hero {
-        padding: 6rem 0;
+        padding: 8rem 0;
       }
       
       .about-hero h1 {
@@ -893,9 +1323,118 @@
       .about-hero p {
         font-size: 1.2rem;
       }
+      
+      .stat-card h3 {
+        font-size: 2.5rem;
+      }
+      
+      .lightbox-content {
+        max-width: 95%;
+        max-height: 95%;
+      }
     }
-
-    
   </style>
+
+  <script>
+    // Scroll progress indicator
+    window.onscroll = function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+    
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    
+    function animateCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+        
+        if(count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(animateCounters, 1);
+        } else {
+          counter.innerText = target;
+        }
+      });
+    }
+    
+    // Intersection Observer for animations
+    const animateOnScroll = function() {
+      const elements = document.querySelectorAll('[data-animation]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.getAttribute('data-animation');
+            const delay = entry.target.getAttribute('data-delay') || 0;
+            
+            setTimeout(() => {
+              entry.target.classList.add('animate__animated', `animate__${animation}`);
+              if(animation === 'counter') {
+                animateCounters();
+              }
+            }, delay);
+            
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    };
+    
+    // Lightbox functionality
+    function openLightbox(imageSrc, captionText) {
+      const lightbox = document.getElementById('imageLightbox');
+      const lightboxImg = document.getElementById('lightboxImage');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+      
+      lightbox.style.display = "block";
+      lightboxImg.src = imageSrc;
+      lightboxCaption.innerHTML = captionText;
+    }
+    
+    function closeLightbox() {
+      document.getElementById('imageLightbox').style.display = "none";
+    }
+    
+    // Initialize gallery buttons
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryBtns = document.querySelectorAll('.gallery-btn');
+      
+      galleryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const imageSrc = this.getAttribute('data-image');
+          const title = this.getAttribute('data-title');
+          openLightbox(imageSrc, title);
+        });
+      });
+      
+      // Close lightbox when clicking outside image
+      window.addEventListener('click', function(event) {
+        const lightbox = document.getElementById('imageLightbox');
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+      
+      // Initialize animations
+      animateOnScroll();
+    });
+    
+    // Simulate chat opening
+    function openChat() {
+      alert("Chat feature would open here in a real implementation");
+    }
+  </script>
 </body>
 </html>
